@@ -15,10 +15,10 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select"
+import { categories } from "../data"
 
 
 export default function submit() {
-  const categories = ["c1", "c2", "c3", "c4", "c5", "c6", "c7"]
   return (
     <div className="bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 min-h-screen">
       <h1 className='text-center text-white text-6xl pt-20'>
@@ -54,7 +54,7 @@ export default function submit() {
                     <SelectContent>
                       <SelectGroup className="bg-[#182138] text-white">
                         {categories.map((value, key) => (
-                          <SelectItem value={value}>{value}</SelectItem>
+                          <SelectItem value={value.name}>{value.name}</SelectItem>
                         ))}
                       </SelectGroup>
                     </SelectContent>
